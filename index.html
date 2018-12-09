@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Cliente BBMKT </title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// Creación de la petición HTTP
+			var req = new XMLHttpRequest();
+			// false = Petición HTTP GET síncrona hacia el archivo fotos.json del servidor
+			req.open("GET", "https://localhost:3000/v1/adduser", true);
+			// Envío de la petición
+			req.send(null);
+			// Impresión por la consola de la respuesta recibida desde el servidor
+			console.log(req.responseText);
+		</script>
+		<h1> Cliente de BBMKT v1</h1>
+		<div class="valores">
+		</div>
+	</body>
+</html>
