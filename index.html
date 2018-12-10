@@ -4,18 +4,30 @@
 		<title> Cliente BBMKT </title>
 	</head>
 	<body>
-		<script type="text/javascript">
-			// Creación de la petición HTTP
-			var req = new XMLHttpRequest();
-			// false = Petición HTTP GET síncrona hacia el archivo fotos.json del servidor
-			req.open("GET", "https://localhost:3000/v1/adduser", true);
-			// Envío de la petición
-			req.send(null);
-			// Impresión por la consola de la respuesta recibida desde el servidor
-			console.log(req.responseText);
-		</script>
+		
 		<h1> Cliente de BBMKT v1</h1>
-		<div class="valores">
+		<div id="valores">
 		</div>
+		<script type="text/javascript">
+			console.log(" Entro en JS");
+			// Creación de la petición HTTP
+			var req = new XMLHttpRequest();console.log(" Creo xml");
+			// false = Petición HTTP GET síncrona hacia el archivo fotos.json del servidor
+			req.open("GET", "localhost:3000/v1/adduser", true);console.log(" .open");
+			//req.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+			// Envío de la petición
+			req.send();console.log(" .send");
+
+			// Impresión por la consola de la respuesta recibida desde el servidor
+			//console.log(req);
+
+			var vl = document.getElementById("valores");
+			vl.innerHTML = req.response;
+
+			
+			/*fetch('https://localhost:3000/v1/adduser');
+			.then(response => response.json());
+			.then(json => console.log(json));*/
+		</script>
 	</body>
 </html>
