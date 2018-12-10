@@ -10,21 +10,11 @@
 		</div>
 		<script type="text/javascript">
 			console.log(" Entro en JS");
-			// Creación de la petición HTTP
 			var req = new XMLHttpRequest();console.log(" Creo xml");
-			// false = Petición HTTP GET síncrona hacia el archivo fotos.json del servidor
-			req.open("GET", "localhost:3000/v1/adduser", true);console.log(" .open");
-			//req.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
-			// Envío de la petición
+			req.open("GET", "https://bbmkt.herokuapp.com/v1/adduser", true);console.log(" .open");
 			req.send();console.log(" .send");
-
-			// Impresión por la consola de la respuesta recibida desde el servidor
-			//console.log(req);
-
 			var vl = document.getElementById("valores");
 			vl.innerHTML = req.response;
-
-			
 			/*fetch('https://localhost:3000/v1/adduser');
 			.then(response => response.json());
 			.then(json => console.log(json));*/
