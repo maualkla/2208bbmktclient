@@ -17,6 +17,8 @@
 				color:white;
 				padding: 20px;
 				margin: 10% 35%;
+				-webkit-box-shadow: 7px 6px 19px -3px rgba(0,0,0,0.43); 
+				box-shadow: 7px 6px 19px -3px rgba(0,0,0,0.43);
 			}
 			#valores
 			{
@@ -26,9 +28,12 @@
 				color:white; 
 				margin: 0% 30%; 
 				height: 30%;
+				font-family: courier new;
 				border-radius: 20px;
 				padding: 20px;
 				text-align: left;
+				-webkit-box-shadow: 7px 6px 19px -3px rgba(0,0,0,0.43); 
+				box-shadow: 7px 6px 19px -3px rgba(0,0,0,0.43);
 			}
 		</style>
 		<div id="titulo"> Cliente de BBMKT v1</div>
@@ -39,9 +44,16 @@
 			console.log(" Entro en JS"); vl.innerHTML += " ========> Entro de JS <br>";
 			var req = new XMLHttpRequest();console.log(" Creo xml"); vl.innerHTML += "========> Se ha creado el archivo XMLHttpRequest <br>";
 			req.open("GET", "localhost:3000/v1/adduser", true);console.log(" .open"); vl.innerHTML += "========> Se ha definido la URL y el metodo GET <br>";
-			req.send();console.log(" .send"); vl.innerHTML += "========> Se ha hecho la peticion a la URL localhost:3000/v1/adduser <br>";
+			req.send();console.log(" .send"); vl.innerHTML += "========> Se ha hecho la peticion a la URL: localhost:3000/v1/adduser <br>";
+			if(req.response)
+			{
+				vl.innerHTML += "========> La respuesta es: <br>" + req.response;
+			}
+			else
+			{
+				vl.innerHTML += "========> No hay respuesta ";
+			}
 			
-			vl.innerHTML += "========> La respuesta es: <br>" + req.response;
 			/*fetch('https://localhost:3000/v1/adduser');
 			.then(response => response.json());
 			.then(json => console.log(json));*/
