@@ -5,7 +5,8 @@
 	</head>
 	<body>
 		<style type="text/css">
-			body{
+			body
+			{
 				font-family: sans-serif; font-size: 20px; text-align: center;
 			}
 			#titulo
@@ -66,7 +67,7 @@
 				req.send();console.log(" .send"); vl.innerHTML += "========> Se ha hecho la peticion a la URL: "+ url_1+" <br>";
 				if(req.response)
 				{
-					vl.innerHTML += "========> La respuesta es: <br>" + req.response +"<br>";
+					vl.innerHTML += "========> La respuesta es: <br>"+ req.response +"<br>";
 				}
 				else
 				{
@@ -77,8 +78,6 @@
 				.then(response => response.json());
 				.then(json => console.log(json));*/
 			}
-			
 		</script>
-		
 	</body>
 </html>
